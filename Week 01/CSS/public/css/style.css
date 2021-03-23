@@ -22,3 +22,11 @@ ul li {
   display: inline-block;
   padding-right: 15px;
 }
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 1px;
+  text-align: center;
+  position: static;
+}
