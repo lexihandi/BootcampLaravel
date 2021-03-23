@@ -12,6 +12,7 @@ header {
   display: flex;
   justify-content: space-between;
   position: sticky;
+  margin-bottom: 15px;
 }
 
 ul {
@@ -23,10 +24,26 @@ ul li {
   padding-right: 15px;
 }
 
+h1 {
+  text-align: center;
+}
+
+section {
+  background-color: white;
+  margin-left: 80;
+  margin-right: 80;
+  padding: 10px;
+}
+
+article {
+  border-bottom: 1px solid;
+}
+
 footer {
   background-color: black;
   color: white;
   padding: 1px;
   text-align: center;
   position: static;
+  margin-top: 15px;
 }
