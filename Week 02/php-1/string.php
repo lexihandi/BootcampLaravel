@@ -25,6 +25,10 @@
 
     $first_sentence = "Hello PHP!"; // Panjang string 10, jumlah kata: 2
     $second_sentence = "I'm ready for the challenges"; // Panjang string: 28,  jumlah kata: 5
+    $pjgFirstSentence = str_word_count($first_sentence);
+    $pjgSecondSentence = str_word_count($second_sentence);
+    echo "Panjang string $first_sentence adalah " . strlen($first_sentence) . " dan jumlah kata adalah $pjgFirstSentence <br>";
+    echo "Panjang string $second_sentence adalah " . strlen($second_sentence) . " dan jumlah kata adalah $pjgSecondSentence";
 
     echo "<h3> Soal No 2</h3>";
     /* 
@@ -38,8 +42,8 @@
     echo "<label>String: </label> \"$string2\" <br>";
     echo "Kata pertama: " . substr($string2, 0, 1) . "<br>";
     // Lanjutkan di bawah ini
-    echo "Kata kedua: ";
-    echo "<br> Kata Ketiga: ";
+    echo "Kata kedua: " . substr($string2, 2, 5);
+    echo "<br> Kata Ketiga: " . substr($string2, 6, 8);
 
     echo "<h3> Soal No 3 </h3>";
     /*
@@ -47,9 +51,9 @@
             Mengubah karakter atau kata yang ada di dalam sebuah string.
         */
     $string3 = "PHP is old but sexy!";
+    $string3 = str_replace("sexy!", "awesome", $string3);
     echo "String: \"$string3\" ";
     // OUTPUT : "PHP is old but awesome"
-
     ?>
 </body>
 
