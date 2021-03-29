@@ -89,7 +89,6 @@
             Aliases: "El"
             Status: "Alive"
 
-
             Output:
             Array
                 (
@@ -128,6 +127,34 @@
                 )
             
         */
+    $soal3 = [
+        [
+            "Name" => 'Will Byers',
+            "Age" => 12,
+            "Aliases" => "Will the Wise",
+            "Status" => "Alive"
+        ],
+        [
+            "Name" => "Mike Wheeler",
+            "Age" => 12,
+            "Aliases" => "Dugeon Master",
+            "Status" => "Alive"
+        ],
+        [
+            "Name" => "Jim Hooper",
+            "Age" => 43,
+            "Aliases" => "Chief Hopper",
+            "Status" => "Deceased"
+        ],
+        [
+            "Name" => "Eleven",
+            "Age" => 12,
+            "Aliases" => "El",
+            "Status" => "Alive"
+        ],
+    ];
+
+    print_r($soal3);
     ?>
 </body>
 
