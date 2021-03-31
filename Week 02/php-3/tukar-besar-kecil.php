@@ -1,6 +1,8 @@
 <?php
-function tukar_besar_kecil($string){
-//kode di sini
+function tukar_besar_kecil($string)
+{
+    $tukar = strtolower($string) ^ strtoupper($string) ^ $string;
+    return $tukar . "<br>";
 }
 
 // TEST CASES
