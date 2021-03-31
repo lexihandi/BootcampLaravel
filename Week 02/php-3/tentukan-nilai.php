@@ -1,7 +1,19 @@
 <?php
 function tentukan_nilai($number)
 {
-    //  kode disini
+    if ($number >= 85 && $number <= 100) {
+        echo "sangat baik";
+        echo "<br>";
+    } else if ($number >= 70 && $number < 85) {
+        echo "baik";
+        echo "<br>";
+    } else if ($number >= 60 && $number < 70) {
+        echo "cukup";
+        echo "<br>";
+    } else {
+        echo "kurang";
+        echo "<br>";
+    }
 }
 
 //TEST CASES
