@@ -1,6 +1,15 @@
 <?php
-function ubah_huruf($string){
-//kode di sini
+function ubah_huruf($string)
+{
+    $new = "";
+    $old = "";
+    echo $old;
+
+    for ($i = 0; $i < strlen($string); $i++) {
+        $old = $string[$i];
+        $new .= ++$old;
+    }
+    return $new . "<br>";
 }
 
 // TEST CASES
