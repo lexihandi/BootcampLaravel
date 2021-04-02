@@ -28,7 +28,7 @@ CREATE TABLE `items` (
 )
 ================================================
 3.
-insert  into `users`(`id`,`name`,`email`,`password`) values 
+insert into `users`(`id`,`name`,`email`,`password`) values 
 (1,'John Doe','	john@doe.com','	john123'),
 (2,'Jane Doe','	jane@doe.com','	jenita123');
 
@@ -46,7 +46,12 @@ insert  into `items`(`id`,`name`,`description`,`price`,`stock`,`category_id`) va
 ================================================
 4.
 a) SELECT name, email from users
+
 b) - SELECT name, description, price, stock from items where price > 1000000 
-   - 
-c) 
+   - SELECT * FROM items WHERE name LIKE '%sang%' 
+
+c) SELECT * FROM items INNER JOIN categories ON items.category_id = categories.id 
+================================================
+5.
+UPDATE items SET price = 2500000 WHERE name = 'Sumsang b50' 
 
