@@ -10,7 +10,7 @@
             <div class="form-group">
                 <label for="title">Nama</label>
                 <input type="text" class="form-control" name="name" id="title" placeholder="Masukkan Nama">
-                @error('title')
+                @error('name')
                     <div class="alert alert-danger">
                         {{ $message }}
                     </div>
@@ -19,7 +19,7 @@
             <div class="form-group">
                 <label for="body">Umur</label>
                 <input type="text" class="form-control" name="age" id="body" placeholder="Masukkan Umur">
-                @error('body')
+                @error('age')
                     <div class="alert alert-danger">
                         {{ $message }}
                     </div>
@@ -28,14 +28,14 @@
             <div class="form-group">
                 <label for="body">Bio</label>
                 <input type="text" class="form-control" name="bio" id="body" placeholder="Masukkan Bio">
-                @error('body')
+                @error('bio')
                     <div class="alert alert-danger">
                         {{ $message }}
                     </div>
                 @enderror
             </div>
             <button type="submit" class="btn btn-primary">Tambah</button>
-            <a href="/" class="btn btn-danger btn-md">Batal</a>
+            <a href="/cast" class="btn btn-danger btn-md">Batal</a>
         </form>
     </div>
 @endsection

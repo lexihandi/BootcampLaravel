@@ -25,7 +25,7 @@ class CastController extends Controller
                 "age" => $request["age"],
                 "bio" => $request["bio"],
             ]);
-        return redirect('/');
+        return redirect('/cast');
     }
 
     public function index()
@@ -49,23 +49,23 @@ class CastController extends Controller
     public function update($id, Request $request)
     {
         $request->validate([
-            'name' => 'required|unique:cast',
+            'name' => 'required|unique:casts',
             'age' => 'required',
             'bio' => 'required',
         ]);
         $query = DB::table('casts')
             ->where('id', $id)
             ->update([
-                "name" => $request["name"],
-                "age" => $request["age"],
-                "bio" => $request["bio"],
+                'name' => $request["name"],
+                'age' => $request["age"],
+                'bio' => $request["bio"],
             ]);
-        return redirect('/');
+        return redirect('/cast');
     }
 
     public function destroy($id)
     {
         $query = DB::table('casts')->where('id', $id)->delete();
-        return redirect('/');
+        return redirect('/cast');
     }
 }
