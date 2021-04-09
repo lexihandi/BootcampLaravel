@@ -15,16 +15,17 @@ class CastController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|unique:cast',
+            'name' => 'required|unique:casts',
             'age' => 'required',
             'bio' => 'required',
         ]);
-        $query = DB::table('casts')->insert([
-            "name" => $request["name"],
-            "age" => $request["age"],
-            "bio" => $request["bio"],
-        ]);
-        return redirect('/cast');
+        $query = DB::table('casts')
+            ->insert([
+                "name" => $request["name"],
+                "age" => $request["age"],
+                "bio" => $request["bio"],
+            ]);
+        return redirect('/');
     }
 
     public function index()
@@ -35,14 +36,14 @@ class CastController extends Controller
 
     public function show($id)
     {
-        $casts = DB::table('casts')->where('id', $id)->first();
-        return view('show', compact('casts'));
+        $cast = DB::table('casts')->where('id', $id)->first();
+        return view('show', compact('cast'));
     }
 
     public function edit($id)
     {
-        $casts = DB::table('casts')->where('id', $id)->first();
-        return view('edit', compact('casts'));
+        $cast = DB::table('casts')->where('id', $id)->first();
+        return view('edit', compact('cast'));
     }
 
     public function update($id, Request $request)
@@ -52,17 +53,19 @@ class CastController extends Controller
             'age' => 'required',
             'bio' => 'required',
         ]);
-        $query = DB::table('casts')->insert([
-            "name" => $request["name"],
-            "age" => $request["age"],
-            "bio" => $request["bio"],
-        ]);
-        return redirect('/cast');
+        $query = DB::table('casts')
+            ->where('id', $id)
+            ->update([
+                "name" => $request["name"],
+                "age" => $request["age"],
+                "bio" => $request["bio"],
+            ]);
+        return redirect('/');
     }
 
     public function destroy($id)
     {
         $query = DB::table('casts')->where('id', $id)->delete();
-        return redirect('/cast');
+        return redirect('/');
     }
 }

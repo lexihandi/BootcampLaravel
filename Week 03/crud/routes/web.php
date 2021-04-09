@@ -13,8 +13,8 @@
 
 Route::get('/', 'CastController@index');
 Route::get('/cast/create', 'CastController@create');
-Route::get('/cast', 'CastController@store');
+Route::post('/cast', 'CastController@store');
 Route::get('/cast/{cast_id}', 'CastController@show');
 Route::get('/cast/{cast_id}/edit', 'CastController@edit');
-Route::get('/cast/{cast_id}', 'CastController@update');
-Route::get('/cast/{cast_id}', 'CastController@destroy');
+Route::put('/cast/{cast_id}', 'CastController@update');
+Route::delete('/cast/{cast_id}', 'CastController@destroy');
